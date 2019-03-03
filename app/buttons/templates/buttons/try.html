@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href = "../../static/buttons/try.css" type = "text\css" rel = "stylesheet"/>
+</head>
+<body>
+<div>
+    <p> Generate your code </p>
+    <form action = "{% url 'buttons:generatecode' %}" method = "post">
+        {% csrf_token %}
+        <input id = "b1" type = "submit" name = "generatecode" value = "generate">
+    </form>
+</div>
+<div>
+    <p>Or, type in the generated code!</p>
+    <form action = "{%  url 'buttons:generatecode' %}" method = "post">
+        {% csrf_token %}
+        <input id = "b2" type = "text" name = "submittedcode" value = "type in">
+    </form>
+</div>
+</body>
+</html>

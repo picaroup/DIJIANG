@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <title>DIJIANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link href = "{% static 'buttons/main.css' %}" type = "text/css" rel = "stylesheet"/>
+</head>
+<body>
+<div id = "page1">
+    <h1 id  = "main">
+        DIJIANG
+    </h1>
+    <h1>
+        A convinent way for transferring files.
+    </h1>
+    <div id = "buttons">
+        <form action = "{% url 'buttons:try' %}" method = "get">
+            <input type = "submit" id = "try" name = "page" value = "try"/>
+        </form>
+        <form action = "{% url 'buttons:tutorial' %}" method = "get">
+            <input type = "submit" id = "tutorial" name = "page" value = "tutorial"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
