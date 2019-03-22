@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href = "../../static/buttons/try.css" type = "text\css" rel = "stylesheet"/>
+    <title>DIJIANG CODE</title>
+    <link href = "../../static/buttons/try.css" type = "text/css" rel = "stylesheet"/>
 </head>
 <body>
-<div>
-    <p> Generate your code </p>
+
+    <div id  = "generate">
+        Generate your code!
+    </div>
+
     <form action = "{% url 'buttons:generatecode' %}" method = "post">
-        {% csrf_token %}
-        <input id = "b1" type = "submit" name = "generatecode" value = "generate">
+        <input type = "submit" id = "generatecode" name = "generatecode" value = "Generate">
     </form>
-</div>
-<div>
-    <p>Or, type in the generated code!</p>
+
+
+
+    <div id  = "TypeIn">
+        Or, type in the generated code!
+    </div>
     <form action = "{%  url 'buttons:generatecode' %}" method = "post">
-        {% csrf_token %}
-        <input id = "b2" type = "text" name = "submittedcode" value = "type in">
+        <input id = "typein_button" type = "text" name = "submittedcode"  placeholder="Enter here...">
     </form>
-</div>
+
+
 </body>
 </html>

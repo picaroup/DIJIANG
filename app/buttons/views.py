@@ -43,11 +43,7 @@ def tryy(request):
 
 def tutorial(request):
    temp = request.GET["page"]
-   print("here")
    return render(request, 'buttons/tutorial.html')
 
 def upload(request):
     return render(request, 'buttons/upload.html')
-
-
-

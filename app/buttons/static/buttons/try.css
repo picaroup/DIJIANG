@@ -1,7 +1,94 @@
-#b1:hover{
-    cursor:pointer;
+html {
+    font-family: sans-serif;
+    height:100vh;
+    width: 100vw;
+    margin:0;
 }
 
-#b1{
-    border-radius: 5px 3px;
+body{
+    height:100vh;
+    width: 100vw;
+    margin: 0;
+    background: url("image/main_desktop.jpg") no-repeat center;
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    opacity: 0.8;
+    overflow: auto;
+    text-align: center;
+}
+
+#generate{
+    font-family: inherit;
+    font-size: 5vw;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+
+
+#generatecode {
+    position: relative;
+    top: 15vh;
+
+    font-family: inherit;
+
+    width: 12vw;
+    height: 7vh;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    font-size: 2vw;
+
+    border-radius: 1vh;
+}
+
+#generatecode:hover {
+    cursor: pointer;
+    background-image: url("image/try.gif");
+}
+
+#TypeIn {
+    font-family: inherit;
+    font-size: 5vw;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+}
+
+#typein_button {
+    position: relative;
+    top: 35vh;
+
+    font-family: inherit;
+
+    width: 12vw;
+    height: 7vh;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    font-size: 2vw;
+
+    border-radius: 1vh;
 }

@@ -2,18 +2,29 @@
 <html lang = "en-US">
 <head>
     <title>DIJIANG</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
     {% load staticfiles %}
-    <link href = "{% static 'buttons/main.css' %}" type = "text/css" rel = "stylesheet"/>
+    <link href = "{% static 'buttons/main.css' %}" type = "text/css" rel = "stylesheet"/> -->
+    <link href = "../../static/buttons/main.css" type = "text/css" rel = "stylesheet"/>
 </head>
+
 <body>
-<div id = "page1">
-    <h1 id  = "main">
+    <div id = "login">
+        <!-- Need to add action and method to send data -->
+        <form method="post">
+            <input id = "username" type = "text" name = "username" placeholder="Username">
+            <input id = "password" type = "password" name = "password" placeholder="Password">
+        </form>
+    </div>
+
+    <div id  = "dijiang_title">
         DIJIANG
-    </h1>
-    <h1>
+    </div>
+
+    <div id  = "dijiang_description">
         A convinent way for transferring files.
-    </h1>
+    </div>
+
     <div id = "buttons">
         <form action = "{% url 'buttons:try' %}" method = "get">
             <input type = "submit" id = "try" name = "page" value = "try"/>
@@ -22,6 +33,6 @@
             <input type = "submit" id = "tutorial" name = "page" value = "tutorial"/>
         </form>
     </div>
-</div>
+
 </body>
 </html>
