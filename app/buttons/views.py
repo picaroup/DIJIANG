@@ -25,10 +25,11 @@ def verifycode(request):
         user = user_[0]
         new_user = Users()
         new_user.code = request.POST['verifycode']
-        user.other_user = new_user
+        new_user.file = request.FILES
         new_user.other_user = user
-        user.save()
         new_user.save()
+        user.other_user = new_user
+        user.save()
     return render(request, 'buttons/verify.html', {"check": check})
 
 def mainview(request):
@@ -45,5 +46,15 @@ def tutorial(request):
    temp = request.GET["page"]
    return render(request, 'buttons/tutorial.html')
 
-def upload(request):
-    return render(request, 'buttons/upload.html')
+def download(request):
+    user_ = Users.objects.filter(code=request.POST['code'])
+    check=1
+    if len(user_) == 0:
+        check = 0
+        return render(request, 'buttons/verify.html', {"check": check})
+    else:
+        user = user_[0]
+        filename = user.file.name
+        response = HttpResponse(content_type='application/force-download')
+        response['Content-Disposition'] = 'attachment; filename='+filename
+        return response

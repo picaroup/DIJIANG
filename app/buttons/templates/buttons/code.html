@@ -1,1 +1,6 @@
 <head>Your code is {{ code }}</head>
+<form action = "{%url 'buttons:download' %}" method = "post">
+    {% csrf_token %}
+    <input type = "text" name = "code" placeholder="here">
+    <button type = "submit">download</button>
+</form>

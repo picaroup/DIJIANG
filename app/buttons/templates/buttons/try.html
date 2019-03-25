@@ -11,6 +11,7 @@
     </div>
 
     <form action = "{% url 'buttons:generatecode' %}" method = "post">
+        {% csrf_token %}
         <input type = "submit" id = "generatecode" name = "generatecode" value = "Generate">
     </form>
 
@@ -19,8 +20,11 @@
     <div id  = "TypeIn">
         Or, type in the generated code!
     </div>
-    <form action = "{%  url 'buttons:generatecode' %}" method = "post">
-        <input id = "typein_button" type = "text" name = "submittedcode"  placeholder="Enter here...">
+    <form action = "{%  url 'buttons:verifycode' %}" method = "post">
+        {% csrf_token %}
+        <input id = "typein_button" type = "text" name = "verifycode"  placeholder="Enter here...">
+        <input type = "file" name="files">
+        <input id = "typein_submit" type = "submit" value = "submit">
     </form>
 
 

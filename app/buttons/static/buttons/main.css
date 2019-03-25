@@ -18,42 +18,34 @@ body{
     margin: 0;
     background: url("image/main_desktop.jpg") no-repeat center;
     background-size: cover;
-    width:100vw;
-    height:100vh;
     opacity: 0.8;
     overflow: auto;
 }
 
 
-#login{
+#loginholder{
     width: 100vw;
-    height: 12vh;
-    float: left;
-    background-color: black;
+    height: 6vh;
+    float: right;
+    background-color: white;
+    opacity:1;
 }
 
-#username,
-#password {
-    font-family: inherit;
-    display: inline-block;
-    width: 10vw;
-    height: 4vh;
-
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
-
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-
-    font-size: 2vw;
-
-    border-radius: 1vh;
+#login{
+    float:right;
+    border-radius: 4vw 3vh;
+    background-color: white;
+    color: orangered;
+    margin-top:1vh;
+    margin-right:5vw;
+    border:none;
+    font-size: larger;
+    opacity:1;
 }
 
+#login:hover{
+    cursor:pointer;
+}
 
 #dijiang_title{
     font-family: inherit;
@@ -101,7 +93,7 @@ body{
     padding-right: 1vw;
 
     font-size: 2vw;
-
+    border: none;
     border-radius: 1vh;
 }
 
